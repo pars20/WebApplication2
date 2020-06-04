@@ -20,7 +20,10 @@ namespace WebApplication2.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var user1 = new User { userName = "jafar", userID = 1 };
+            ViewData["i"] = "samira";
+            ViewBag.j = "sara";
+            return View( user1 );
         }
 
         public IActionResult Privacy()
